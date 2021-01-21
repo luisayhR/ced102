@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <script src="https://kit.fontawesome.com/3a6a0ae251.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./css/index.css">
+        <link rel="stylesheet" href="./css/route1_page1.css">
+        
+    </head>
+    <body>
+        <script src="customSelectMenu.js" src="./js/customSelectMenu.js"></script>
+
+        <header>
+          <div class="active"></div>
+          <div class="subNav">
+              <div class="subNav_button">
+                  <span><i class="fas fa-caret-square-down fa-2x"></i></span>
+              </div>
+              <div class="lang_block">
+                  <p class=title>Language</p>
+              </div>
+              <div class="social_block">
+                  <p class=title>Social Media</p>
+              </div>
+              <ul class="subNav_list">
+                  <li class=account>
+                      <a href="#"><span><i class="fas fa-user"></i></span></a>
+                  </li> 
+                  <li class="shoppingcart">
+                      <a href="#"><span><i class="fas fa-shopping-cart"></i></span></a>   
+                  </li>  
+              </ul>
+          </div>
+          <!-- <div class="subNav_menu">
+              <div class="lang">
+                  <ul class="lang_submenu">
+                      <li><a lang="zh-tw" href="#" title="正體中文">正體中文</a></li>         
+                      <li><a lang="en" href="#" title="English">English</a></li>   
+                  </ul>
+              </div>
+              <div class="social">
+                  <ul class="social_submenu">
+                      <li><a href="#"><i class="fab fa-instagram fa-lg"></i></a></li>         
+                      <li><a href="#"><i class="fab fa-facebook-f fa-lg"></i></a></li>
+                      <li><a href="#"><i class="fab fa-twitter fa-lg"></i></a></li>   
+                  </ul>
+              </div>
+          </div> -->
+      </header>
+      <aside>
+          <div class="sidebar">
+            <div class="logo">
+              <a href="./index.html"><img src="./pic/logo.jpg" width="70px"></a>
+          </div>
+              <div class="pagination-box">
+                  <ul class="pagination">
+                      <li>
+                          <a data-index="1" href="#active" class="active">Home</a> 
+                          <!-- <p>首頁</p> -->
+                      </li>
+                      <li>
+                          <a data-index="2" href="#marathon">Event</a> 
+                          <!-- <p>賽事</p> -->
+                      </li>
+                      <li>
+                          <a data-index="3" href="#route">Info</a> 
+                          <!-- <p>路徑</p> -->
+                      </li>
+                      <li class="aboutus">
+                          <a data-index="4" href="./about us.html">About US</a> 
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </aside>
+        
+        
+        <main>
+        <div class="slider">
+            <div class="distance">
+                <a href="#" target="_blank">
+                  <p class="des">By Distance</p>
+                </a>
+                    
+        </div>
+            <div class="region">
+                <a href="#" target="_blank">
+                    <p class="des">By Region</p>
+                    </a>
+            </div>
+        </div>
+        <div class="middle">
+            <div class="search">
+                <p>Search Your Route</p>
+                <input class="search" type="search" id="search" placeholder="請輸入關鍵字" value="">
+                <button type="submit"><i class="fas fa-search"></i></button>
+                <br>
+                <select class="distance" style="width:100px;">
+                <option value="0" selected>Distance</option>
+                <option value="1">within 5k</option>
+                <option value="2">5~15k</option>
+                <option value="3">21k</option>
+                <option value="4">42k</option>
+                </select>
+                
+                <select class="region" style="width:100px;">
+                <option value="0" selected>Region</option>
+                <option value="1">Northern</option>
+                <option value="2">Central</option>
+                <option value="3">Southern</option>
+                <option value="4">Eastern</option>
+                <option value="5">Other</option>
+                </select>
+
+                <br>
+                <div class="condition">
+                <input type="checkbox" name="condition[]" value="河濱/海濱" id="河濱/海濱">
+                <label for="河濱/海濱">Riverbank</label>
+                <input type="checkbox" name="condition[]" value="越野" id="越野">
+                <label for="越野">Offroad</label>
+                <input type="checkbox" name="condition[]" value="運動場/公園" id="運動場/公園">
+                <label for="運動場/公園">Park/Track</label>
+                <input type="checkbox" name="condition[]" value="市區道路" id="市區道路">
+                <label for="市區道路">City</label>
+                </div>
+            </div>
+        </div>
+
+      <div class="result">
+        <div class="block1">
+          <div class="pic1"></div>
+            <div class="content1">
+              <a href="#" target="_blank"><h2>2021 1st Marathon</h2></a>
+              <br>
+              <span><i class="far fa-calendar-alt"></i>2021 January 01</span>
+              <span><i class="fas fa-map-marker-alt"></i>
+              Taipei 101</span>
+              <p class="p1">
+              With its lanes of blackened walk-ups and countless shopfronts, the city may look like it was thrown together in a hurry, but look again. Great care has been taken to make it a truly liveable place for people: 
+              </p>
+        </div>
+          <span class="more1">
+            <a href="#"><i class="fas fa-chevron-right" fa-2x></i></a></span>
+      </div>
+      <div class="block2">
+        <div class="pic2"></div>
+          <div class="content2">
+            <a href="#" target="_blank"><h2>2021 1st Marathon</h2></a>
+            <br>
+            <span><i class="far fa-calendar-alt"></i>2021 January 01</span>
+            <span><i class="fas fa-map-marker-alt"></i>
+            Taipei 101</span>
+            <p class="p2">
+            With its lanes of blackened walk-ups and countless shopfronts, the city may look like it was thrown together in a hurry, but look again. Great care has been taken to make it a truly liveable place for people: 
+            </p>
+      </div>
+        <span class="more2">
+          <a href="#"><i class="fas fa-chevron-right" fa-2x></i></a></span>
+    </div>
+    <div class="block3">
+      <div class="pic3"></div>
+        <div class="content3">
+          <a href="#" target="_blank"><h2>2021 1st Marathon</h2></a>
+          <br>
+          <span><i class="far fa-calendar-alt"></i>2021 January 01</span>
+          <span><i class="fas fa-map-marker-alt"></i>
+          Taipei 101</span>
+          <p class="p1">
+          With its lanes of blackened walk-ups and countless shopfronts, the city may look like it was thrown together in a hurry, but look again. Great care has been taken to make it a truly liveable place for people: 
+          </p>
+    </div>
+      <span class="more3">
+        <a href="#"><i class="fas fa-chevron-right" fa-2x></i></a></span>
+  </div>
+    </div>
+
+        <!-- <div class="bottom">
+          <div class="content">
+
+              <div class="footer_copyright">© Island Runner All Rights Reserved.</div>
+          </div>
+      <footer class="footer"></footer>
+      </div> -->
+
+        <!-- sidebar轉場 -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+        // DOM 載入完成之後
+        $(function(){
+
+            // 點擊
+            $("div.subNav_button").on("click", function(){
+            // -open 的樣式切換
+            $(this).closest("div.subNav").toggleClass("-open");
+            });
+
+        });
+        </script>
+    </body>
+</html>
+
+<!-- 
+<li> <a href="#" id="accesskeyo" title=":::上方選單連結" accesskey="o" ><span class="accesskeytypeHome" ></span>
+</span></a><a href="#" title="網站導覽">網站導覽</a></li>
+<li id="FAQ"><a href="#" title="常見問答">常見問答</a></li>
+<li id="ContactUs"><a href="#" title="聯絡我們">聯絡我們</a></li> -->

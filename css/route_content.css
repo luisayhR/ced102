@@ -1,0 +1,95 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    font-family:"微軟正黑體", "ubuntu";
+}
+
+.top{
+    position:absolute;
+    width: 100%;
+    top: 0px;
+    left: 70px;
+    /* border: 2px solid black; */
+    height: 500px;
+}
+
+div.banner img.bannerimg{
+    width: calc(100% - 70px);
+
+}
+
+div.title{
+    width: 100%;
+    position: relative;
+
+    /* border: 1px solid red; */
+}
+td.title{
+    color:#5e91aa;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+
+table.title{
+    position: relative;
+    left: 50px;
+}
+td.title, td.info{
+    padding: 5px 30px;
+    left: 20px;
+    /* border: 1px solid green;    */
+}
+td.registrate{
+    /* border: 1px solid purple; */
+    width: 800px;
+}
+input.registrate{
+    background-color: #5e91aa70;
+    padding: 5px 20px;
+    color: #25546b;
+    border-radius: 5px;
+    font-size: 28px;
+    font-weight: bold;
+
+    position: absolute;
+    right: 0px;
+}
+
+.middle{
+    position:absolute;
+    width: 100%;
+    top: 600px;
+    left: 70px;
+    /* border: 2px solid blue; */
+    height: 500px;
+}
+
+div.content_sidebar{
+    width: 60px;
+    position: fixed;
+    top: 70%;
+    /* border: 1px solid green; */
+}
+div.content_sidebar ul{
+    list-style: none;
+    line-height: 2;
+}
+div.content_sidebar i.far{
+    color: #643d3dab;
+}
+div.content{
+    top: 200px;
+    left:0px;
+    height: 500px;
+    position:relative;
+    /* border: 1px solid orange; */
+    width: calc(100% - 150px);
+}
+div.content p{
+    font-size: 18px;
+    overflow-wrap: normal;
+}

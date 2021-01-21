@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+body {
+  font-family: "微軟正黑體", "ubuntu";
+  font-size: 18px;
+}
+header {
+  /* border: 1px solid black; */
+  height: 150px;
+}
+div.logo img {
+  height: 80px;
+  width: auto;
+}
+div.navBar {
+  background-color: #dd9787;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10%;
+  height: 100px;
+}
+div.navBar li {
+  list-style: none;
+  vertical-align: top;
+}
+ul.navLinks {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+ul.navLinks li {
+  padding: 0 40px;
+}
+ul.navLinks a {
+  text-decoration: none;
+  color: #393141;
+}
+
+li.socialBtn:hover {
+  cursor: pointer;
+}
+div.socialLinks {
+  border: 1px solid black;
+  display: block;
+  position: relative;
+  top: 40px;
+  /* display: none; */
+}
+ul.socialBtn:hover div.socialLinks {
+  display: block;
+}
+div.socialLinks li {
+  display: flex;
+  justify-content: space-around;
+  top: 10px;
+}
+ul.userLinks {
+  display: flex;
+  column-gap: 2rem;
+}
+ul.userLinks a {
+  color: #393141;
+}
+
+/* =======breadcrumb======== */
+
+div.breadcrumbs {
+  position: relative;
+  left: 10%;
+  top: 20px;
+  color: #393141;
+}
+div.breadcrumbs a {
+  text-decoration: none;
+  color: #393141;
+}
+
+/* =======three blocks======== */
+
+/* main {
+  border: 1px solid black;
+}
+div.top {
+}
+div.slider {
+  display: flex;
+  justify-content: center;
+  column-gap: 4rem;
+}
+div.distance,
+div.region,
+div.month {
+  height: 300px;
+  width: 300px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+div.slider div.distance{
+  background-image: url("../pic/bydistance.jpg");
+  background-position: center;
+}
+div.slider div.region{
+  background-image: url("../pic/byregion.jpg");
+  background-position: center;
+}
+div.slider div.month{
+  background-image: url("../pic/byeventdate.jpg");
+  background-position: center;
+}
+div.slider span {
+  background-color: #4119696c;
+  display: inline-block;
+  width: 100%;
+  padding: 10px 20px;
+
+  position: relative;
+  color: white;
+} */
+
+/* =======nav area======== */
+div.opt {
+  display: inline-block;
+  margin-top: 30px;
+  margin-left:15%;
+  line-height: 3rem;
+}
+
+div.opt .opt1, .opt2, .opt3, .opt4{
+  background-color: #587b7f;
+  margin-top:5px;
+  border-radius: 5px;
+  padding: 0 5px;
+  color: #D0D6B5;
+}
+
+
+
+/* =======searching bar======== */
+div.middle {
+  border: 1px solid yellow;
+}
+div.search {
+  border: 1px solid orange
+}
+div.search p{
+  margin-top: 30px;
+  margin-left: 10%;
+}

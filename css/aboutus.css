@@ -1,0 +1,53 @@
+.banner{
+    background-image: url("../pic/runner.jpg");
+    width: auto;
+    height: 300px;
+    align-items: center;
+    justify-content: flex-end;
+}
+.banner p{
+    font-size: 60px;
+    color:seashell;
+    margin-left: 90px;
+    padding-top: 150px;
+}
+
+.block1,.block2,.block3{
+    display: flex;
+    /* border: 1px solid black; */
+    height: 300px;
+    width: 1000px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    margin-left: 270px;
+    background-color:rgba(110, 110, 110, 0.212);
+    border-radius: 5px;
+
+}
+.p1, .p2, .p3{
+    display: flex;
+    width: 300px;
+    /* border: 1px solid blue; */
+    padding: 10px 20px;
+}
+.pic1{
+    background-image: url(../pic/aboutus1.jpg);
+    width:700px;
+    background-size: 100%;
+    background-position: center;
+    border-radius: 5px;
+}
+.pic2{
+    background-image: url(../pic/aboutus2.jpg);
+    width:700px;
+    background-size: 100%;
+    background-position: center;
+    border-radius: 5px;
+}
+.pic3{
+    background-image: url(../pic/aboutus3.jpg);
+    width:700px;
+    background-size: 100%;
+    background-position: center;
+    border-radius: 5px;
+}
