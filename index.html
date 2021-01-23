@@ -7,12 +7,20 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="./js/jquery-3.5.1.js"></script>
+        <script src="./js/slider.js"></script>
+        <script src="./js/trigger.js"></script>
         <script src="https://kit.fontawesome.com/3a6a0ae251.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="./css/index.css">
+        <!-- 導入動畫套件  gsap 2 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+        <!-- scrollmagic 主要程式 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+        <!-- scrollmagic + gsap  -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+        <!-- scrollmagic 觸發點指標顯示 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
         <style>
-            *{
-                margin: 0;
-            }
+
         </style>
         
     </head>
@@ -71,117 +79,58 @@
         <main>
             <div class="banner">
 
-                <div id="marathon" class="marathon">
-                    <div class="upE">
-                        <p class="title">Upcoming Event</p>
-                        <div class="slideContainer">
-                            <div class="Eslide">
-                                <img src="./pic/upcoming1.jpg" >
-                                <div class="text">Caption</div>
-                            </div>
-                            <div class="Eslide">
-                                <img src="./pic/upcoming2.jpg" >
-                                <div class="text">Caption</div>
-                            </div>                            
-                            <div class="Eslide">
-                                <img src="./pic/upcoming3.jpg" >
-                                <div class="text">Caption</div>
-                            </div>
-                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                        </div>
-                        <br>
-                        <div style="text-align:center">
-                            <span class="dot" onclick="currentSlide(1)"></span>
-                            <span class="dot" onclick="currentSlide(2)"></span>
-                            <span class="dot" onclick="currentSlide(3)"></span>
-                        </div>         
-                    </div>
-                    <div class="preE">
-                        <p class="title">Previous Event</p>
-                        <div class="slideContainer">
-                            <div class="Pslide">
-                                <img src="./pic/previous1.jpg" >
-                                <div class="text">Caption</div>
-                            </div>
-                            <div class="Pslide">
-                                <img src="./pic/previous3.jpg" >
-                                <div class="text">Caption</div>
-                            </div>                            
-                                <div class="Pslide">
-                                <img src="./pic/previous4.jpg" >
-                                <div class="text">Caption</div>
-                            </div>
-                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                        </div>
-                        <br>
-                        <div style="text-align:center">
-                            <span class="dot" onclick="currentSlide(1)"></span>
-                            <span class="dot" onclick="currentSlide(2)"></span>
-                            <span class="dot" onclick="currentSlide(3)"></span>
-                        </div>         
-                    </div>
-
-                    <div class="fourblocks">
-                        <div class="blueboxs">
-                            <a href="#" class="" target="_blank">Search Event</a>
-                        </div>    
-                        <div class="blueboxs">
-                            <span class="featured">Featured Event</span>
-                            <a href="#" class="" target="_blank"></a>
-                        </div>
-                        <div class="blueboxs">
-                            <span class="three">Marathon News</span>
-                            <a href="#" class="" target="_blank"></a>
-                        </div>
-                        <div class="blueboxs">
-                            <span class="four">View Record</span>
-                            <a href="#" class="" target="_blank"></a>
-                        </div>
-                    </div>
-                </div>
-
-                    
-                    
-
- 
-                </div>
-                <div id="route" class="route">
-                    <div class="flexmara">
-                        <div class="route">Training Zone</div>
-                        <a href="#"  target="_blank">
-                        <div class="featuredroute">
-                        <p class="des">find the route near you</p>  
-                        </div>
-                        </a>
-                    </div>
-
-                    <div class="routeslider">    
-                        <div class="news">
-                            <p class="des">Runners' Story</p>
-                            <a href="#" target="_blank">
-                            </a>
-                        </div>
+                <div class="marathon">
+                    <div class="mEvent">
+                        <p class="title">Marathon Event</p>
                         <div class="fourblocks">
-                            <div class="blueboxs">
-                                <span class="search">one</span>
+                            <div class="bluebox">
+                                <p>Search Event</p>
                                 <a href="#" class="" target="_blank"></a>
                             </div>    
-                            <div class="blueboxs">
-                                <span class="featured">two</span>
+                            <div class="bluebox">
+                                <p class="featured">Featured Event</p>
                                 <a href="#" class="" target="_blank"></a>
                             </div>
-                            <div class="blueboxs">
-                                <span class="three">three</span>
+                            <div class="bluebox">
+                                <p class="three">Marathon News</p>
                                 <a href="#" class="" target="_blank"></a>
                             </div>
-                            <div class="blueboxs">
-                                <span class="four">Four</span>
+                            <div class="bluebox">
+                                <p class="four">View Record</p>
                                 <a href="#" class="" target="_blank"></a>
                             </div>
                         </div>
-                    </div>   
+                    </div>
+                    <div id="sliderBoard">
+                        <ul id="mSlider">
+                            <li><img src="./pic/upcoming1.jpg" class="image"></li>
+                            <li><img src="./pic/upcoming2.jpg" class="image"></li>
+                            <li><img src="./pic/upcoming3.jpg" class="image"></li>
+                        </ul>
+                        <!-- 圓圈圈 -->
+                        <ul id="contentButton">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Training zone  -->
+                <div id="trigger02"></div>
+                <div class="trainingZone"></div>
+                <div id=""></div>
+                <div id=""></div>
+                <div id=""></div>
+                <div id=""></div>
+                <div id=""></div>
+                <div id=""></div>
+                <div id=""></div>
+                <div id=""></div>
+                <div id=""></div>
+                <div id=""></div>
+
+
+                </div>
+            </div>
+
         </main>
 
         
@@ -201,67 +150,7 @@
             });
         });
         </script>
-    <!-- upcoming slideshow -->
-        <script>
-            var slideIndex = 1;
-            showSlides(slideIndex);
-
-            // Next/previous controls
-            function plusSlides(n) {
-            showSlides(slideIndex += n);
-            }
-
-            // Thumbnail image controls
-            function currentSlide(n) {
-            showSlides(slideIndex = n);
-            }
-
-            function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("Eslide");
-            var dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = slides.length}
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex-1].style.display = "block";
-            dots[slideIndex-1].className += " active";
-            }
-        </script>
-    <!-- previous slideshow -->
-        <script>
-            var slideIndex = 1;
-            showSlides(slideIndex);
-
-            // Next/previous controls
-            function plusSlides(n) {
-            showSlides(slideIndex += n);
-            }
-
-            // Thumbnail image controls
-            function currentSlide(n) {
-            showSlides(slideIndex = n);
-            }
-
-            function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("Pslide");
-            var dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = slides.length}
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex-1].style.display = "block";
-            dots[slideIndex-1].className += " active";
-            }
+   
         </script>
     </body>
 </html>
