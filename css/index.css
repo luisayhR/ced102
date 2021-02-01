@@ -28,6 +28,7 @@ span.divider {
   display: block;
   width: 60%;
   margin: 0 auto;
+  margin-top: 50px;
 }
 /* ======introvideo======= */
 .video {
@@ -78,10 +79,11 @@ span.divider {
   top: 0;
 }
 .logo {
-  vertical-align: middle;
+  display: block;
   margin: 0 auto;
   position: relative;
-  top: 0;
+  margin-top: 10px;
+  margin-left: 10px;
 }
 .logo img {
   width: 50px;
@@ -115,45 +117,48 @@ span.divider {
   left: 6px;
   width: 28px;
   background-color: white;
-  top: 0;
-  bottom: 0;
+  top: 10px;
+  bottom: 10px;
   margin: auto;
   box-shadow: 0px 8px 0px white, 0px -8px 0px white;
 }
 nav {
-  width: 50%;
+  width: 100%;
   position: absolute;
   height: calc(100vh - 50px);
   top: 50px;
   left: 0;
-  background-color: rgba(255, 192, 203, 0.329);
-  display: block;
-  padding-top: 20px;
-  z-index: ;
-
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 234, 237, 0.253),
+    rgba(25, 59, 109, 0.466)
+  );
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  line-height: 4rem;
+  box-shadow: 0px 5px 5px rgba(148, 148, 148, 0.315);
   left: -100%;
   transition: 0.5s;
+}
+nav .divider {
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 #menu_control:checked ~ .header nav {
   left: 0;
   position: relative;
   z-index: 100;
 }
-.navLinks li {
-  font-size: 18px;
-  padding: 10px 20px;
+.navLinks {
+  margin-top: 50px;
 }
-.LoginSignup {
-  position: absolute;
-  left: 20px;
-  bottom: 30px;
-}
-.LoginSignup a {
-  color: white;
-}
+
 .navLinks li {
   color: var(--onyx);
   font-weight: bolder;
+  font-size: 18px;
 }
 .navLinks span {
   color: white;
@@ -171,32 +176,41 @@ nav {
     display: flex;
   }
   .logo {
-    justify-content: flex-start;
+    display: block;
     margin-left: 10%;
   }
+  .logo img {
+    width: 70px;
+    height: 70px;
+  }
   nav {
+    background: none;
+    box-shadow: none;
     display: flex;
     position: relative;
     left: 0%;
     height: auto;
-    width: calc(100vw - 10% - 50px);
+    width: calc(100% - 70px);
     top: 0;
     padding: 0;
     background-color: transparent;
-    margin-left: 30%;
+
     justify-content: flex-end;
     align-items: center;
+  }
+  nav .divider {
+    display: none;
   }
   ul.navLinks > :first-child {
     display: none;
   }
+  .navLinks span {
+    color: var(--onyx);
+  }
   ul.navLinks {
     display: flex;
-  }
-  div.LoginSignup {
+    column-gap: 2rem;
     margin-right: 10%;
-    margin-left: 30%;
-    white-space: nowrap;
   }
 }
 /* =====intro===== */
@@ -235,7 +249,7 @@ nav {
 }
 /* =====marathon banner===== */
 .marathon {
-  margin-top: 150px;
+  margin-top: 100px;
 }
 #sliderBoard {
   width: 70%;
@@ -399,13 +413,15 @@ nav {
   border-radius: 10px;
   padding: 10px 10px;
   margin: 0 auto;
-  box-shadow: 0 0 8px 5px rgba(216, 216, 216, 0.521);
+  box-shadow: 0 0 8px 5px rgba(168, 129, 114, 0.521);
   margin-bottom: 50px;
 }
 .ppl1 p.reviewtitle,
 .ppl2 p.reviewtitle,
 .ppl3 p.reviewtitle {
   margin: 10px 0;
+  font-weight: bolder;
+  color: rgb(28, 90, 148);
 }
 .reviewpic {
   width: 280px;
@@ -424,8 +440,12 @@ nav {
 .comment p {
   margin-top: 5px;
   font-size: 16px;
+  color: var(--onyx);
 }
-
+.comment i.fas {
+  margin-top: 5px;
+  color: gold;
+}
 .comment span {
   color: rgb(141, 129, 129);
   font-size: 14px;
@@ -438,7 +458,7 @@ nav {
   height: 50px;
   width: 50px;
   border-radius: 50px;
-  /* border: 1px solid rgb(141, 129, 129); */
+  border: 2px solid rgb(28, 90, 148);
 }
 .ppl2 .memberimg {
   background-image: url("../pic/icon/peep-10.png");
@@ -447,7 +467,7 @@ nav {
   height: 50px;
   width: 50px;
   border-radius: 50px;
-  /* border: 1px solid rgb(141, 129, 129); */
+  border: 2px solid rgb(28, 90, 148);
 }
 .ppl3 .memberimg {
   background-image: url("../pic/icon/peep-41.png");
@@ -456,7 +476,7 @@ nav {
   height: 50px;
   width: 50px;
   border-radius: 50px;
-  /* border: 1px solid rgb(141, 129, 129); */
+  border: 2px solid rgb(28, 90, 148);
 }
 .member {
   display: flex;
@@ -465,6 +485,7 @@ nav {
 }
 .member .Name {
   margin-left: 10px;
+  font-weight: bold;
 }
 /* =====Footer===== */
 
