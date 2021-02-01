@@ -144,16 +144,21 @@ nav {
   padding: 10px 20px;
 }
 .LoginSignup {
-  position: relative;
+  position: absolute;
   left: 20px;
+  bottom: 30px;
 }
-.navLinks li:first-child,
-.navLinks li:last-child {
+.LoginSignup a {
+  color: white;
+}
+.navLinks li {
   color: var(--onyx);
   font-weight: bolder;
 }
-.navLinks li:hover {
-  background-color: rgba(255, 192, 203, 0.534);
+.navLinks span {
+  color: white;
+}
+.navLinks a:hover {
 }
 .navLinks a {
   color: var(--onyx);
