@@ -3,12 +3,12 @@
 
   new ScrollMagic.Scene({
       triggerElement : '#trigger02',
-      duration: '100%'
+      offset: 500,
   }).on('enter', function(){
       console.log('enter 進入');
-      $('.trainingZone').css('background-color' , 'red')
+      $('.trainingZone').css('background-color' , 'grey')
   }).on('leave', function(){
       console.log('leave 離開');
-      $('.trainingZone').css('background-color' , 'black')
+      $('.trainingZone').css('background-color' , 'blue')
   })
   .addIndicators().addTo(controller);

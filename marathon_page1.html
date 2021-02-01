@@ -8,46 +8,60 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <script src="https://kit.fontawesome.com/3a6a0ae251.js" crossorigin="anonymous"></script>
-        <!-- <link rel="stylesheet" href="./css/index.css"> -->
+        <link rel="stylesheet" href="./css/index.css">
         <link rel="stylesheet" href="./css/marathon_page1.css">
+        <script src="./js/jquery-3.5.1.js"></script>
+        <script src="./js/jquery-ui.js"></script>
         
     </head>
     <body>
-        <header>
+        <nav>
             <div class="navBar">
-                <div class="logo">
+                <div class="logo" id="home">
                     <a href="./index.html"><img src="./pic/logo.svg" width="70px"></a>
                 </div>
   
                 <ul class="navLinks">
-                    <li><a href="#">Events</a></li>
-                    <li><a href="#">Preparation</a></li>
-                    <li><a href="#">AboutUs</a></li>
-                    <li class="langBtn">Language</li>
-                    <li class="socialBtn">Social Media
-                        <!-- <div class="socialLinks">
-                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>         
-                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>  
-                        </div>    -->
-                    </li>
+                    <li>Events</li>
+                    <li>Preparation</li>
+                    <li>AboutUs</li>
+                    <li class="LangBtn">Language</li>
+                    <li class="socialBtn">Social Media</li>                  
                 </ul>
-                <ul class="userLinks">
+                <ul class="socialLinks">
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>         
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>  
+                </ul>
+                <div class="userLinks">
                     <li class=account>
                         <a href="#"><span><i class="fas fa-user"></i></span></a>
                     </li> 
                     <li class="shoppingcart">
                         <a href="#"><span><i class="fas fa-shopping-cart"></i></span></a>   
-                </ul>
-
+                </div>
             </div>
-            <div class="breadcrumbs"> <a href="#">Home</a> / Events</div>  
+
+                <div class="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+        </nav>
+        <header>
+            <div class="wrap">
+                <ol class="breadcrumb">
+                    <li><a href=#">Home</a></li>
+                    <li><a href=#">Events</a></li>
+                </ol>
+            </div>
+
         </header>
    
         <main>
             <div class="top">
                 <div class="slider">
-                    <!-- <div class="distance">
+                    <div class="distance">
                         <span class="bydistance">Show By Distance</span>
                         <a href="#" class="distance_pic" target="_blank">
                         </a>
@@ -63,78 +77,85 @@
                         <span class="bymonth">Show By Month</span>
                         <a href="#" class="eventdate_pic" target="_blank">
                         </a>
-                    </div> -->
-                    <div class="opt">
-                        <div class="opt1">By Month</div>
-                        <div class="opt2">By Region</div>
-                        <div class="opt3">By Distance</div>
-                        <div class="opt4">By Type</div>
                     </div>
-                    
-
                 </div>
             </div>
             <div class="middle">
-                <div class="search">
-                    <p>Search Marathons</p>
-                    <input class="search" type="search" id="search" placeholder="please enter keyword" value="">
-                    <button type="submit"><i class="fas fa-search"></i></button>
-                    <br>
-                    <select class="distance" style="width:100px;">
-                    <option value="0" selected>Distance</option>
-                    <option value="1">0~5k</option>
-                    <option value="2">5~15k</option>
-                    <option value="3">21k</option>
-                    <option value="4">42k</option>
-                    <option value="4">Ultra marathon</option>
-                    </select>
-                    
-                    <select class="region" style="width:100px;">
-                    <option value="0" selected>Region</option>
-                    <option value="1">Northern Taiwan</option>
-                    <option value="2">Central Taiwan</option>
-                    <option value="3">Southern Taiwan</option>
-                    <option value="4">Eastern Taiwan</option>
-                    <option value="5">Offshore islands</option>
-                    </select>
-
-                    <select class="month" style="width:100px;">
-                    <option value="0" selected>Month</option>
-                    <option value="1">January</option>
-                    <option value="2">February</option>
-                    <option value="3">March</option>
-                    <option value="4">April</option>
-                    <option value="5">May</option>
-                    <option value="6">June</option>
-                    <option value="7">July</option>
-                    <option value="8">August</option>
-                    <option value="9">September</option>
-                    <option value="10">October</option>
-                    <option value="11">November</option>
-                    <option value="12">December</option>
-                    </select>
-
-
-                    <br>
-                    <div class="filter">
-                        <div class="filterBtn">
-                            Refine
+                <div class="wrapSearch">
+                    <div class="title">
+                        <p>Search Marathons</p>
+                        <div class="filter">
+                            <div class="filterBtn">
+                            <label>Refine</label>
                             <i class="fas fa-sliders-h"></i>
+                            </div>
                         </div>
-                        <select class="sort">
-                            <option value="">Featured</option>
-                            <option value="">Bookable</option>
-                            <option value="">Date</option>
+                    </div>
+                    <div class="search">                        
+                        <input class="searchBar" type="search" id="search" placeholder="please enter keyword" value="">
+                        <button type="submit" class="searchButton"><i class="fas fa-search"></i></button>
+                    </div>
 
-                        </select>
-                        
-                    <!-- <input type="checkbox" name="condition[]" value="開放報名" id="開放報名">
-                    <label for="開放報名">報名中</label>
-                    <input type="checkbox" name="condition[]" value="不須抽籤" id="不須抽籤">
-                    <label for="不須抽籤">不須抽籤</label> -->
+                        <!-- <input type="checkbox" name="condition[]" value="開放報名" id="開放報名">
+                        <label for="開放報名">報名中</label>
+                        <input type="checkbox" name="condition[]" value="不須抽籤" id="不須抽籤">
+                        <label for="不須抽籤">不須抽籤</label> -->
+                    </div>
+                    <div class="optionTitle">
+                        <div class="optMonth">By Month
+                            <i class="fas fa-caret-down"></i>
+                        </div>
+                        <div class="optRegion">By Region
+                            <i class="fas fa-caret-down"></i>
+                        </div>
+                        <div class="optDistance">By Distance
+                            <i class="fas fa-caret-down"></i>
+                        </div>
+                        <div class="optType">By Type
+                            <i class="fas fa-caret-down"></i>
+                        </div>
+                    </div>
+                    <div class="filterOption">
+                        <ul class="optMonth">
+                            <label><input type="checkbox" class="option" value="JAN"><span>JAN</span></label>
+                            <label><input type="checkbox" class="option" value="FEB"><span>FEB</span></label>
+                            <label><input type="checkbox" class="option" value="MAR"><span>MAR</span></label>
+                            <label><input type="checkbox" class="option" value="APR"><span>APR</span></label>
+                            <label><input type="checkbox" class="option" value="MAY"><span>MAY</span></label>
+                            <label><input type="checkbox" class="option" value="JUN"><span>JUN</span></label>
+                            <label><input type="checkbox" class="option" value="JUL"><span>JUL</span></label>
+                            <label><input type="checkbox" class="option" value="AUG"><span>AUG</span></label>
+                            <label><input type="checkbox" class="option" value="SEP"><span>SEP</span></label>
+                            <label><input type="checkbox" class="option" value="OCT"><span>OCT</span></label>
+                            <label><input type="checkbox" class="option" value="NOV"><span>NOV</span></label>
+                            <label><input type="checkbox" class="option" value="DEC"><span>DEC</span></label>
+                        </ul>
+                        <ul class="optRegion">
+                            <label><input type="checkbox" class="option" value="Eastern"><span>Eastern</span></label>
+                            <label><input type="checkbox" class="option" value="Western"><span>Western</span></label>
+                            <label><input type="checkbox" class="option" value="Northern"><span>Northern</span></label>
+                            <label><input type="checkbox" class="option" value="Southern"><span>Southern</span></label>
+                            <label><input type="checkbox" class="option" value="Offshore"><span>Offshore</span></label>
+                        </ul>
+                        <ul class="optDistance">
+                            <label><input type="checkbox" class="option" value="0~5k"><span>0~5k</span></label>
+                            <label><input type="checkbox" class="option" value="5~15k"><span>5~15k</span></label>
+                            <label><input type="checkbox" class="option" value="21k/half marathon"><span>21k/half marathon</span></label>
+                            <label><input type="checkbox" class="option" value="42k/full marathon"><span>42k/full marathon</span></label>
+                            <label><input type="checkbox" class="option" value="Other"><span>Other</span></label>
+                        </ul>
+                        <ul class="optType">
+                            <label><input type="checkbox" class="option" value="Offtrack"><span>Offtrack</span></label>
+                            <label><input type="checkbox" class="option" value="City"><span>City</span></label>
+                            <label><input type="checkbox" class="option" value="Virtual"><span>Virtual</span></label>
+                        </ul>
+                    </div>
+                    <div class="filterbox">
+                        篩選條件：<div class="filterResult"></div>
+                    </div>
                 </div>
-            </div>
 
+            </div>
             <div class="result">
                 <div class="result">
                     <a href="./marathon_content.html" class="result1" target="_blank">
@@ -161,9 +182,37 @@
         
         
         
-        
+        <!-- 點擊打開項目 -->
         <script>
+            $(document).ready(function () {
+                $('div.optMonth').click(function(){
+                    $('ul.optMonth').slideToggle(500,'linear');
+                });
+                $('div.optRegion').click(function(){
+                $('ul.optRegion').slideToggle(500,'linear');
+                });
+                $('div.optDistance').click(function(){
+                    $('ul.optDistance').slideToggle(500,'linear');
+                });
+                $('div.optType').click(function(){
+                    $('ul.optType').slideToggle(500,'linear');
+                });
+                $('.optMonth').on('click', function(){
+                    $('.optMonth').removeClass('selected');
+                    $(this).addClass('selected');
+                });
+            });			
+        </script>
 
+<!-- 篩選結果 -->
+        <script>
+            $(document).ready(function () {
+                $('.option').click(function(){
+                    //only input can use "val"
+                    let item = $(this).val();
+                    $('.filterResult').append(`${item}、`);
+                });
+            });			
         </script>
     </body>
 </html>

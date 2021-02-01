@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="./js/jquery-3.5.1.js"></script>
+        <script src="./js/slider.js"></script>
+        <script src="https://kit.fontawesome.com/3a6a0ae251.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./css/index.css">
+        <!-- 導入動畫套件  gsap 2 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+        <!-- scrollmagic 主要程式 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+        <!-- scrollmagic + gsap  -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+        <!-- scrollmagic 觸發點指標顯示 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+        <style>
+
+        </style>
+        
+    </head>
+    <body>
+        <nav>
+            <div class="navBar">
+                <div class="logo" id="home">
+                    <a href="./index.html"><img src="./pic/logo.svg" width="70px"></a>
+                </div>
+  
+                <ul class="navLinks">
+                    <li>Events</li>
+                    <li>Preparation</li>
+                    <li>AboutUs</li>
+                    <li class="LangBtn">Language</li>
+                    <li class="socialBtn">Social Media</li>                  
+                </ul>
+                <ul class="socialLinks">
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>         
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>  
+                </ul>
+                <div class="userLinks">
+                    <li class=account>
+                        <a href="#"><span><i class="fas fa-user"></i></span></a>
+                    </li> 
+                    <li class="shoppingcart">
+                        <a href="#"><span><i class="fas fa-shopping-cart"></i></span></a>   
+                </div>
+            </div>
+
+                <div class="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+        </nav>
+        <header>
+
+
+
+            
+            <!-- <div class="langBlock">                       
+                <ul class="langLinks">
+                <li>繁體中文</li>
+                <li>English</li>
+                </ul>
+            </div> -->
+            <div class="introvideo">
+            <!-- <h2 class="videotitle">Explore Taiwan<br> With Your Own Feet</h2> -->
+                <video autoplay disablePictureInPicture controlsList="nodownload"  muted loop> 
+                <source src="./pic/homepagevideo.mp4" type="video/mp4">
+            </video>
+        </div>
+        </header>
+        
+        <div id="trigger01"></div>
+        <main>
+            <div class="intro">
+                <img src="pic/icon/quote-right-solid.svg">
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas excepturi distinctio maxime reiciendis laboriosam sapiente accusamus, expedita, eligendi, sint incidunt beatae! Tempora alias, eum officia vel debitis quae dignissimos earum!
+                </p>
+            </div>
+                <div class="marathon">
+                    <div class="mEvent">
+                        <div id="sliderBoard">
+                            <ul id="mSlider">
+                                <li><div class="sliderbox">
+                                    <p>Lorem ipsum dolor sit amet</p>
+                                    <img src="./pic/upcoming1.jpg" class="image">
+                                </div></li>
+                                <li><div class="sliderbox">
+                                    <p>Lorem ipsum dolor sit amet</p>
+                                    <img src="./pic/upcoming2.jpg" class="image">
+                                </div></li>                                
+                                <li><div class="sliderbox">
+                                    <p>Lorem ipsum dolor sit amet</p>
+                                    <img src="./pic/upcoming3.jpg" class="image">
+                                </div></li>
+                            </ul>
+                            <!-- 圓圈圈 -->
+                            <ul id="contentButton">
+                            </ul>
+                        </div>
+                        <p class="title">Marathon Event</p>
+                        <div class="fourblocks">
+                            <div class="bluebox">
+                                <p>Search Event</p>
+                                <a href="#" class="" target="_blank"></a>
+                            </div>    
+                            <div class="bluebox">
+                                <p class="featured">Featured Event</p>
+                                <a href="#" class="" target="_blank"></a>
+                            </div>
+                            <div class="bluebox">
+                                <p class="three">Marathon News</p>
+                                <a href="#" class="" target="_blank"></a>
+                            </div>
+                            <div class="bluebox">
+                                <p class="four">View Record</p>
+                                <a href="#" class="" target="_blank"></a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                    
+
+                <!-- Training zone  -->
+                <div id="trigger02"></div>
+                <div class="trainingZone">
+                    <p class="title">Training Zone</p>
+
+                </div>
+
+
+
+
+                </div>
+
+        </main>
+
+        
+        <div class="bottom">
+            <div class="content">
+
+                <div class="footer_copyright">© Island Runner All Rights Reserved.</div>
+            </div>
+            <footer class="footer"></footer>
+        </div>
+        
+    <!-- hamburger -->
+        <script>
+        $(function(){
+            $(".hamburger").click(function(){
+                $(".navBar").toggleClass("-open");
+            });
+        });
+        </script>
+
+    <!-- 觸發function  -->
+        <script>
+            // var controller = new ScrollMagic.Controller();
+            // // var tm01 = TweenMax.to('.navBar', 1, {y:900});
+            // new ScrollMagic.Scene({
+            //     triggerElement: '#trigger01',
+            // })
+            // .setClassToggle('.sticky', 'on')
+            // .addIndicators().addTo(controller);
+        </script>
+    <!-- 觸發function -->
+        <script>
+            var controller = new ScrollMagic.Controller();
+            new ScrollMagic.Scene({
+                triggerElement : '#trigger01',
+                offset: '650',
+                reverse: true,  
+                triggerHook: 1,
+            }).on('enter', function(){
+                console.log('enter 進入');
+                $('.navBar').css('background-color' , '#587b7f')
+            }).on('leave', function(){
+                console.log('leave 離開');
+                $('.navBar').css('background-color' , 'transparent')
+            })
+            .addIndicators().addTo(controller);
+        </script>
+    </body>
+</html>

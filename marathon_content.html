@@ -1,154 +1,175 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <script src="https://kit.fontawesome.com/3a6a0ae251.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="./css/index.css">
-        <link rel="stylesheet" href="./css/marathon_page1.css">
-        <link rel="stylesheet" href="./css/marathon_content.css">
-    </head>
-    <body>
-        <script src="customSelectMenu.js" src="./js/customSelectMenu.js"></script>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <Link rel="stylesheet" href="./css/marathon_content.css"></ink>
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script src="./js/slider.js"></script>
+    <script src="./js/contentBanner.js"></script>
+    <script
+      src="https://kit.fontawesome.com/3a6a0ae251.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <link rel="stylesheet" href="./css/index.css" /> -->
+  </head>
+  <style></style>
+  <body>
+    <div class="nav">
+      <input type="checkbox" name="" id="menu_control" />
 
-        <header>
-            <div class="active"></div>
-            <div class="subNav">
-                <div class="subNav_button">
-                    <span><i class="fas fa-caret-square-down fa-2x"></i></span>
-                </div>
-                <div class="lang_block">
-                    <p class=title>Language</p>
-                </div>
-                <div class="social_block">
-                    <p class=title>Social Media</p>
-                </div>
-                <ul class="subNav_list">
-                    <li class=account>
-                        <a href="#"><span><i class="fas fa-user"></i></span></a>
-                    </li> 
-                    <li class="shoppingcart">
-                        <a href="#"><span><i class="fas fa-shopping-cart"></i></span></a>   
-                    </li>  
-                </ul>
-            </div>
-            <!-- <div class="subNav_menu">
-                <div class="lang">
-                    <ul class="lang_submenu">
-                        <li><a lang="zh-tw" href="#" title="正體中文">正體中文</a></li>         
-                        <li><a lang="en" href="#" title="English">English</a></li>   
-                    </ul>
-                </div>
-                <div class="social">
-                    <ul class="social_submenu">
-                        <li><a href="#"><i class="fab fa-instagram fa-lg"></i></a></li>         
-                        <li><a href="#"><i class="fab fa-facebook-f fa-lg"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter fa-lg"></i></a></li>   
-                    </ul>
-                </div>
-            </div> -->
-        </header>
-        <aside>
-            <div class="sidebar">
-                <div class="logo">
-                    <a href="./index.html"><img src="./pic/logo.jpg" width="70px"></a>
-                </div>
-                <div class="pagination-box">
-                    <ul class="pagination">
-                        <li>
-                            <a data-index="1" href="./index.html" class="active">Home</a> 
-                            <!-- <p>首頁</p> -->
-                        </li>
-                        <li>
-                            <a data-index="2" href="#marathon">Event</a> 
-                            <!-- <p>賽事</p> -->
-                        </li>
-                        <li>
-                            <a data-index="3" href="#route">Info</a> 
-                            <!-- <p>路徑</p> -->
-                        </li>
-                        <li class="aboutus">
-                            <a data-index="4" href="./about us.html">About US</a> 
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </aside>
-        
-        
-        <main>
-        <div class="top">
-            <div class="banner">
-            <img class="bannerimg" src="./pic/upcoming6.png">
-            </top>
+      <div class="logo" id="home">
+        <a href="./index.html"><img src="./pic/logo.svg" width="70px" /></a>
+      </div>
 
-            <div class="title">
-                <table class="title">
-                    <tr>
-                      <td class="title"> 
-                        2021第一個馬拉松
-                      </td>
-                      <td class="registrate">
-                        <input class="registrate" type="submit" value="立刻報名">
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="info">
-                        <i class="far fa-calendar-alt"></i>
-                        <span>2021年1月1號</span>
-                        <br>
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>台北小巨蛋</span>
-                      </td>
-                    </tr>
-                </table>
-            </div>
+      <div class="header">
+        <label for="menu_control" class="menu_btn"> Menu </label>
+        <nav>
+          <ul class="navLinks">
+            <li>Events<span></span></li>
+            <li><a href="#">Search</a></li>
+            <li><a href="#">Explore</a></li>
+            <li><a href="#">Prepare</a></li>
+            <li><a href="#">Organizers</a></li>
+          </ul>
+          <div class="LoginSignup"><a href="#">Sign Up or Log in</a></div>
+        </nav>
+      </div>
+    </div>
+    <div class="banner">
+        <div class="window">
+          <div class="container">
+            <img src="./pic/upcoming3.jpg" width="500" height="300">
+            <img src="./pic/chatered2.jpeg"  width="500" height="300">
+
+            <img src="./pic/chatered3.jpg"  width="500" height="300">
+            <img src="./pic/chatered4.jpg"  width="500" height="300">
+
+            <img src="//loremflickr.com/500/300/running">
+            <img src="//loremflickr.com/500/300/finish line">
+          </div>
         </div>
+    </div>
 
-        <div class="middle">
-            <div class="content">
-                <p class="intro">
-臺南古都國際半程馬拉松將於2021年3月7日舉辦，本次活動強調半程馬拉松，依然在臺南市區及安平港賽道奔馳。</p><br>
-
-<p>古都馬是許多跑友多年的回憶，這14年運作過程中有不完美之處主辦方定會檢討改進，同時感謝全國各地參加的跑友的支持，在2021之際，這是一場轉變，品牌轉型為國際半程馬拉松賽事，我們重視2021年的活動，期許創造一場進步的古都，讓大家喜愛臺南的風情，喜愛臺南的旅遊，更喜愛來臺南跑馬拉松!</p><br>
-<p>2021臺南古都國際半程馬拉松工作小組，預祝參加的跑友都有一場美好的馬拉松賽事。</p>
+    <div class="breadcrumb">
+      <div class="wrap">
+        <ol class="breadcrumb">
+            <li><a href=#">Home</a></li>
+            <li><a href=#">Events</a></li>
+            <li><a href=#">Chartered Marathon</a></li>
+        </ol>
+      </div>
+    </div>
+    <div class="title">
+      <p>Taipei Standard Chartered Marathon</p>
+    </div>
+    <div class="detail">
+      <div class="place">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>Taipei</span>            
+      </div>
+      <div class="time">
+        <i class="fas fa-calendar-alt"></i>
+        <span>Jan. 24th, 2021 (Sunday)</span>
+      </div>
+      <div class="tag">
+        <i class="fas fa-tag"></i>
+        <span>city</span>
+      </div>
+      <div class="link">
+        <i class="fas fa-unlink"></i>
+        <span><a href="#">Official Website</a></span>
+      </div>
+    </div>
+    <div class="content">
+      <div class="intro">
+        With a half marathon, 5K and Stomper's Stomp this Oakland event has something for everyone - even the little ones. So whether you are trying to test out your first half, pushing a new PB or want to get your kids out and exercising you should come on down to Frank Ogawa Plaza and join the fun.
+      </div>
+      <div class="review">
+        <p>Review</p>
+        <!-- 1st -->
+        <div class="profile1">
+          <div class="pTitle1">
+            <span class="pName">Melissa P</span>
+            <span>19 January, 2020</span>
+          </div>
+          <div class="pDist">
+            <i class="fas fa-running"></i>
+            <span>42k</span>
+          </div>
+          <div class="pDate">
+            <i class="fas fa-calendar-alt"></i>
+            <span>Jan. 23th, 2022 (Sunday)</span>
+          </div>
+          <div class="comment">
+            <div class="rating">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
             </div>
+            <p>
+              Very flat with couple of small bridges to go up and down but a perfect race to go for your personal best. Water stations are more and better than a lot of major marathons with plenty of food left until last minute (not like NY where there is no food or like Tokyo where food is gone in 3 hrs).
+            </p>
+          </div>
+          <div class="like_btn">
+            <p>Is this comment helpful?</p>
+            <div class="smile_btn"><i class="fas fa-smile"></i></div>
+            <div class="meh_btn"><i class="fas fa-meh"></i></div>       
+            <div class="frown_btn"><i class="fas fa-frown-open"></i></div>       
+            
+          </div>
         </div>
-        </main>
-
-
-
-
-
-
-
-
-        <div class="bottom">
-            <div class="content">
-
-                <div class="footer_copyright">© Island Runner All Rights Reserved.</div>
+        <!-- 2nd -->
+        <div class="profile2">
+          <div class="pTitle2">
+            <span class="pName">Joseph </span>
+            <span>21 January, 2020</span>
+          </div>
+          <div class="pDist">
+            <i class="fas fa-running"></i>
+            <span>21k</span>
+          </div>
+          <div class="pDate">
+            <i class="fas fa-calendar-alt"></i>
+            <span>Jan. 23th, 2022 (Sunday)</span>
+          </div>
+          <div class="comment">
+            <div class="rating">
+              </i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
             </div>
-        <footer class="footer"></footer>
+            <p>
+              Good route and plenty of water station. Need more salonpa spray toward the lady segment of the race
+            </p>
+          </div>
+          <div class="like_btn">
+            <p>Is this comment helpful?</p>
+            <div class="smile_btn"><i class="fas fa-smile"></i></div>
+            <div class="meh_btn"><i class="fas fa-meh"></i></div>
+            <div class="frown_btn"><i class="fas fa-frown-open"></i></div>       
+
+          </div>
         </div>
-        <!-- sidebar轉場 -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script>
-        // DOM 載入完成之後
-        $(function(){
+      </div>
+      <div class="routebox">
+        <div class="route1">
+          <p>Altitude Diagram</p>
+          <img src="https://scbmarathon.com/img/game/routing_05.jpg">
+        </div>
+        <div class="route2">
+          <p>Routing</p> 
+          <img src="https://scbmarathon.com/img/game/routing_en_01.jpg" id="42k">
+        </div>
+      </div>
+    </div>
+  
+  
+  
+  
 
-            // 點擊
-            $("div.subNav_button").on("click", function(){
-            // -open 的樣式切換
-            $(this).closest("div.subNav").toggleClass("-open");
-            });
-
-        });
-        </script>
-    </body>
+  
+  
+  </body>
 </html>
 
 <!-- 

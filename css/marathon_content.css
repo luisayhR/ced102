@@ -1,95 +1,302 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
 }
 
-body{
-    font-family:"微軟正黑體", "ubuntu";
+/* ==== Navigation ==== */
+
+#menu_control {
+  position: absolute;
+  /* display: none; */
 }
 
-.top{
-    position:absolute;
-    width: 100%;
-    top: 0px;
-    left: 70px;
-    /* border: 2px solid black; */
-    height: 500px;
+.header {
+  height: 50px;
+  background-color: #ccc;
+  display: inline-block;
+  z-index: -10;
+
+  position: absolute;
+  width: 100%;
+  top: 0;
 }
-
-div.banner img.bannerimg{
-    width: calc(100% - 70px);
-
+.logo img {
+  width: 50px;
+  height: 50px;
 }
+.logo {
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+}
+.menu_btn {
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  display: block;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  border-radius: 10px;
+}
+.menu_btn span {
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  display: block;
+  overflow: hidden;
+}
+.menu_btn::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  left: 6px;
+  width: 28px;
+  background-color: #aaa;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  box-shadow: 0px 8px 0px #aaa, 0px -8px 0px #aaa;
+}
+nav {
+  width: 50%;
+  position: absolute;
+  height: calc(100vh - 50px);
+  top: 50px;
+  left: 0;
+  background-color: #fcc;
+  display: block;
+  padding-top: 20px;
+  z-index: 100;
 
-div.title{
-    width: 100%;
+  left: -100%;
+  transition: 0.5s;
+}
+#menu_control:checked ~ .header nav {
+  left: 0;
+  position: relative;
+  z-index: 100;
+}
+.navLinks li {
+  font-size: 18px;
+  padding: 10px 20px;
+}
+.LoginSignup {
+  position: relative;
+  left: 20px;
+}
+@media screen and (min-width: 768px) {
+  .menu_btn {
+    display: none;
+  }
+  .header {
+    display: flex;
+  }
+  .logo {
+    justify-content: flex-start;
+    margin-left: 10%;
+  }
+  nav {
+    display: flex;
     position: relative;
-
-    /* border: 1px solid red; */
+    left: 0%;
+    height: auto;
+    width: calc(100vw - 10% - 50px);
+    top: 0;
+    padding: 0;
+    background-color: transparent;
+    margin-left: 30%;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  ul.navLinks > :first-child {
+    display: none;
+  }
+  ul.navLinks {
+    display: flex;
+  }
+  div.LoginSignup {
+    margin-right: 10%;
+    margin-left: 30%;
+    white-space: nowrap;
+  }
 }
-td.title{
-    color:#5e91aa;
-    font-size: 36px;
-    font-weight: bold;
+/* ==== Image Slider ==== */
+.window {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin: 0 auto;
 }
-
-
-table.title{
-    position: relative;
-    left: 50px;
-}
-td.title, td.info{
-    padding: 5px 30px;
-    left: 20px;
-    /* border: 1px solid green;    */
-}
-td.registrate{
-    /* border: 1px solid purple; */
-    width: 800px;
-}
-input.registrate{
-    background-color: #5e91aa70;
-    padding: 5px 20px;
-    color: #25546b;
-    border-radius: 5px;
-    font-size: 28px;
-    font-weight: bold;
-
-    position: absolute;
-    right: 0px;
-}
-
-.middle{
-    position:absolute;
-    width: 100%;
-    top: 600px;
-    left: 70px;
-    /* border: 2px solid blue; */
-    height: 500px;
+.container {
+  display: block;
+  width: 6000px;
+  height: 300px;
+  margin-left: 0px;
 }
 
-div.content_sidebar{
-    width: 60px;
-    position: fixed;
-    top: 70%;
-    /* border: 1px solid green; */
+img {
+  position: relative;
+  float: left;
 }
-div.content_sidebar ul{
-    list-style: none;
-    line-height: 2;
+
+/* =======Breadcrumb======== */
+
+.wrap {
+  position: relative;
+  padding: 10px 10px;
+  width: 100%;
+  margin-top: 10px;
 }
-div.content_sidebar i.far{
-    color: #643d3dab;
+.breadcrumb {
+  width: 100%;
+  display: flex;
 }
-div.content{
-    top: 200px;
-    left:0px;
-    height: 500px;
-    position:relative;
-    /* border: 1px solid orange; */
-    width: calc(100% - 150px);
+.breadcrumb li {
+  padding: 0 20px;
 }
-div.content p{
-    font-size: 18px;
-    overflow-wrap: normal;
+.breadcrumb li:last-child {
+  text-decoration: none;
+  color: var(--onyx);
+  font-weight: bolder;
+}
+.breadcrumb a {
+  text-decoration: none;
+  color: var(--onyx);
+}
+breadcrumb li + li {
+  padding-left: 0;
+}
+.breadcrumb li + li::before {
+  content: "/";
+  color: var(--onyx);
+  margin-right: 25px;
+}
+@media screen and (min-width: 768px) {
+  .wrap {
+    margin-left: 8%;
+  }
+}
+/* =======Title+Detail+Content======== */
+.title {
+  font-size: 1.5rem;
+  position: relative;
+  left: 5%;
+  display: inline-block;
+  line-height: 3rem;
+}
+.detail {
+  /* border: 1px solid green; */
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+  margin-top: 20px;
+  line-height: 2rem;
+}
+.detail .place {
+  flex-direction: column;
+}
+.content {
+  top: 20px;
+  /* border: 1px solid green; */
+  position: relative;
+  left: 5%;
+  width: calc(100% - 10%);
+}
+.content img {
+  width: calc(100% - 10%);
+  box-shadow: 5px -5px 10px rgba(185, 185, 185, 0.322);
+}
+.content .intro::first-letter {
+  font-size: 24px;
+}
+.route1,
+.route2 {
+  position: relative;
+}
+.route1 p,
+.route2 p {
+  font-size: 18px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+@media screen and (min-width: 768px) {
+  .title,
+  .content {
+    left: 10%;
+  }
+  .detail {
+    margin-left: 10%;
+  }
+  .content {
+    width: calc(100% - 20%);
+  }
+  .content img {
+    width: calc(100% - 30%);
+  }
+  .routebox {
+    display: flex;
+    flex-direction: column;
+  }
+}
+/* =======Review======== */
+.review {
+  /* border: 1px solid green; */
+  margin-top: 50px;
+}
+.review p {
+  font-size: 18px;
+}
+.profile1,
+.profile2 {
+  margin-top: 30px;
+}
+.pTitle1 {
+  background-image: url("../pic/icon/peep-3.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.pTitle2 {
+  background-image: url("../pic/icon/peep-10.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.pTitle1 span,
+.pTitle2 span {
+  margin-left: 60px;
+  display: flex;
+  white-space: nowrap;
+}
+.pName {
+  font-weight: bold;
+}
+.pDist,
+.pDate,
+.comment,
+.like_btn {
+  line-height: 1.5rem;
+  margin-left: 10px;
+}
+.comment p::first-letter {
+  font-size: 20px;
+}
+.comment p {
+}
+.like_btn {
+  display: flex;
+  column-gap: 1rem;
 }
