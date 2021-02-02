@@ -6,7 +6,8 @@
     <title></title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- <Link rel="stylesheet" href="./css/marathon_content.css"></ink> -->
+    <link rel="stylesheet" href="./css/index.css" />
+    <Link rel="stylesheet" href="./css/marathon_content.css"></ink>
     <script src="./js/jquery-3.5.1.js"></script>
     <script src="./js/slider.js"></script>
     <script src="./js/contentBanner.js"></script>
@@ -14,28 +15,29 @@
       src="https://kit.fontawesome.com/3a6a0ae251.js"
       crossorigin="anonymous"
     ></script>
-    <!-- <link rel="stylesheet" href="./css/index.css" /> -->
   </head>
-  <style></style>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+    </style>
   <body>
     <div class="nav">
-      <input type="checkbox" name="" id="menu_control" />
-
-      <div class="logo" id="home">
-        <a href="./index.html"><img src="./pic/logo.svg" width="70px" /></a>
+      <input type="checkbox" id="menu_control" />
+      
+      <div class="logo">
+        <a href="./index.html"><img src="./pic/logo.svg" /></a>
       </div>
-
       <div class="header">
         <label for="menu_control" class="menu_btn"></label>
         <nav>
           <ul class="navLinks">
-            <li>Events></li>
-            <li><a href="#">Search</a></li>
-            <li><a href="#">Explore</a></li>
-            <li><a href="#">Prepare</a></li>
-            <li><a href="#">Organizers</a></li>
+            <li><span>Runner</span></li>
+            <li><a href="#">Search Event</a></li>
+            <li><a href="./marathon_search.html">Explore</a></li>
+            <li><a href="#">Prepare </a></li>
+            <li><span>Organizer</span></li>
+            <li><a href="#">Promote</a></li>
+            <li><a href="#">Log in / Sign up</a></li>
           </ul>
-          <div class="LoginSignup"><a href="#">Sign Up or Log in</a></div>
         </nav>
       </div>
     </div>
@@ -57,37 +59,43 @@
     <div class="breadcrumb">
       <div class="wrap">
         <ol class="breadcrumb">
-            <li><a href=#">Home</a></li>
-            <li><a href=#">Events</a></li>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./marathon_search.html">Events</a></li>
             <li><a href=#">Chartered Marathon</a></li>
         </ol>
       </div>
     </div>
-    <div class="title">
-      <p>Taipei Standard Chartered Marathon</p>
+    <div class="eventinfo">
+      <div class="title">
+        <p>Taipei Standard Chartered Marathon</p>
+      </div>
+      <div class="detail">
+        <div class="place">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Taipei</span>            
+        </div>
+        <div class="time">
+          <i class="fas fa-calendar-alt"></i>
+          <span>Jan. 24th, 2021 (Sunday)</span>
+        </div>
+        <div class="tag">
+          <i class="fas fa-tag"></i>
+          <span>city</span>
+        </div>
+        <div class="link">
+          <i class="fas fa-unlink"></i>
+          <span><a href="#">Official Website</a></span>
+        </div>
+      </div>
     </div>
-    <div class="detail">
-      <div class="place">
-        <i class="fas fa-map-marker-alt"></i>
-        <span>Taipei</span>            
-      </div>
-      <div class="time">
-        <i class="fas fa-calendar-alt"></i>
-        <span>Jan. 24th, 2021 (Sunday)</span>
-      </div>
-      <div class="tag">
-        <i class="fas fa-tag"></i>
-        <span>city</span>
-      </div>
-      <div class="link">
-        <i class="fas fa-unlink"></i>
-        <span><a href="#">Official Website</a></span>
-      </div>
-    </div>
-    <div class="content">
+    <span class="divider"></span>
+
+    <div class="eventcontent">
       <div class="intro">
         With a half marathon, 5K and Stomper's Stomp this Oakland event has something for everyone - even the little ones. So whether you are trying to test out your first half, pushing a new PB or want to get your kids out and exercising you should come on down to Frank Ogawa Plaza and join the fun.
       </div>
+      <span class="divider"></span>
+    
       <div class="review">
         <p>Review</p>
         <!-- 1st -->
@@ -147,7 +155,6 @@
             <div class="smile_btn"><i class="fas fa-smile"></i></div>
             <div class="meh_btn"><i class="fas fa-meh"></i></div>
             <div class="frown_btn"><i class="fas fa-frown-open"></i></div>       
-
           </div>
         </div>
       </div>
@@ -162,8 +169,18 @@
         </div>
       </div>
     </div>
-  
-  
+    <div class="bottom">
+      <div class="content">
+        <span class="ourinfo"><a href="#">About US</a> | <a href="#">Contact Us</a></span>
+        <div class="socialLinks">
+          <a href="#"><i class="fab fa-instagram"></i></a>         
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>  
+        </div>
+        <span class="footer_copyright">© Island Runner All Rights Reserved.</span>
+      </div>
+      <footer class="footer"></footer>
+    </div>
   
   
 

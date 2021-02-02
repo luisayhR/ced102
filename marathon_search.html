@@ -8,57 +8,47 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <script src="https://kit.fontawesome.com/3a6a0ae251.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="./css/index.css">
-        <link rel="stylesheet" href="./css/marathon_page1.css">
+        <link rel="stylesheet" href="./css/index.css" />
+        <Link rel="stylesheet" href="./css/marathon_content.css">
+        <link rel="stylesheet" href="./css/marathon_search.css">
         <script src="./js/jquery-3.5.1.js"></script>
         <script src="./js/jquery-ui.js"></script>
-        
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+        </style>
     </head>
     <body>
-        <nav>
-            <div class="navBar">
-                <div class="logo" id="home">
-                    <a href="./index.html"><img src="./pic/logo.svg" width="70px"></a>
-                </div>
-  
+        <div class="nav">
+            <input type="checkbox" id="menu_control" />
+            
+            <div class="logo">
+              <a href="./index.html"><img src="./pic/logo.svg" /></a>
+            </div>
+            <div class="header">
+              <label for="menu_control" class="menu_btn"></label>
+              <nav>
                 <ul class="navLinks">
-                    <li>Events</li>
-                    <li>Preparation</li>
-                    <li>AboutUs</li>
-                    <li class="LangBtn">Language</li>
-                    <li class="socialBtn">Social Media</li>                  
+                  <li><span>Runner</span></li>
+                  <li><a href="#">Search Event</a></li>
+                  <li><a href="./marathon_search.html">Explore</a></li>
+                  <li><a href="#">Prepare </a></li>
+                  <li><span>Organizer</span></li>
+                  <li><a href="#">Promote</a></li>
+                  <li><a href="#">Log in / Sign up</a></li>
                 </ul>
-                <ul class="socialLinks">
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>         
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>  
-                </ul>
-                <div class="userLinks">
-                    <li class=account>
-                        <a href="#"><span><i class="fas fa-user"></i></span></a>
-                    </li> 
-                    <li class="shoppingcart">
-                        <a href="#"><span><i class="fas fa-shopping-cart"></i></span></a>   
-                </div>
+              </nav>
             </div>
-
-                <div class="hamburger">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-        </nav>
-        <header>
-            <div class="wrap">
+          </div>
+          
+          <main>
+            <div class="breadcrumb">
+              <div class="wrap">
                 <ol class="breadcrumb">
-                    <li><a href=#">Home</a></li>
-                    <li><a href=#">Events</a></li>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./marathon_search.html">Events</a></li>
                 </ol>
+              </div>
             </div>
-
-        </header>
-   
-        <main>
             <div class="top">
                 <div class="slider">
                     <div class="distance">
@@ -151,7 +141,7 @@
                         </ul>
                     </div>
                     <div class="filterbox">
-                        篩選條件：<div class="filterResult"></div>
+                        Your result will be narrowed with:<div class="filterResult"></div>
                     </div>
                 </div>
 
@@ -159,7 +149,7 @@
             <div class="result">
                 <div class="result">
                     <a href="./marathon_content.html" class="result1" target="_blank">
-                    <img src="./pic/demo_pic.jpg" width="400px" alt="" title=""></a>
+                    <img src="./pic/upcoming4.jpg" width="400px" alt="" title=""></a>
                     <a href="#" target="_blank">2021第一個馬拉松</a>
                     <i class="far fa-calendar-alt"></i>
                     <span>2021年1月1號</span>
@@ -173,11 +163,16 @@
 
         <div class="bottom">
             <div class="content">
-                <div class="footer_copyright">© Island Runner All Rights Reserved.</div>
+              <span class="ourinfo"><a href="#">About US</a> | <a href="#">Contact Us</a></span>
+              <div class="socialLinks">
+                <a href="#"><i class="fab fa-instagram"></i></a>         
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>  
+              </div>
+              <span class="footer_copyright">© Island Runner All Rights Reserved.</span>
             </div>
             <footer class="footer"></footer>
-        </div>
-        
+          </div>
         
         
         
@@ -197,9 +192,18 @@
                 $('div.optType').click(function(){
                     $('ul.optType').slideToggle(500,'linear');
                 });
-                $('.optMonth').on('click', function(){
-                    $('.optMonth').removeClass('selected');
-                    $(this).addClass('selected');
+                
+                $('.optMonth').on('click', function(){              
+                    $('.optMonth').toggleClass('selected');
+                });
+                $('.optRegion').on('click', function(){               
+                    $('.optRegion').toggleClass('selected');
+                });
+                $('.optDistance').on('click', function(){               
+                    $('.optDistance').toggleClass('selected');
+                });
+                $('.optDistance').on('click', function(){               
+                    $('.optDistance').toggleClass('selected');
                 });
             });			
         </script>
@@ -210,7 +214,7 @@
                 $('.option').click(function(){
                     //only input can use "val"
                     let item = $(this).val();
-                    $('.filterResult').append(`${item}、`);
+                    $('.filterResult').append(`${item},`);
                 });
             });			
         </script>
