@@ -47,12 +47,12 @@ span.divider {
   background-repeat: no-repeat;
   background-attachment: scroll;
 }
-/* .up img {
+.up img {
   color: beige;
   position: fixed;
   left: calc(50% - 25px);
   top: 80%;
-} */
+}
 @media screen and (min-width: 768px) {
   .video {
     /* height: 100vh; */
